@@ -1,0 +1,9 @@
+<label>Start Date</label>
+<label class = "end">End Date</label>
+<div>
+    <input type="datetime-local" #input [(ngModel)]="values" (change)= "onChangeStart(input.value)" min={{min}}>
+    <input type="datetime-local" #endDate [(ngModel)]="endvalue" (change)="onChangeEnd(endDate.value)" min={{mini}}>
+</div>
+<label class="caution">{{caution}}</label>
+<label class="price">Price: {{final_price}}</label>
+<button class="primary" (click)="CalculateHours()">Calculate Price</button>

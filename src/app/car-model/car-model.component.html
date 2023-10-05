@@ -1,0 +1,9 @@
+<section class="listing">
+    <img class="listing-photo" [src]="carModel.imageUrl" alt="Exterior photo of {{carModel.make}}">
+    <h2 class="listing-heading">{{ carModel.make }}</h2>
+    
+    <p class="listing-location">{{ carModel.model}}</p>
+    <p class="listing-price"> Price (per hour):  ₹{{carModel.price }}</p>
+    
+    <a [routerLink]="['/details', carModel.id]">Learn More</a>
+</section>

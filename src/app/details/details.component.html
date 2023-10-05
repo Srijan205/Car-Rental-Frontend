@@ -1,0 +1,31 @@
+<article>
+    <img class="listing-photo" [src]="carModel?.imageUrl"
+      alt="Exterior photo of {{carModel?.make}}"/>
+    <section class="listing-description">
+      <h2 class="listing-heading">{{carModel?.make}}</h2>
+      <p class="listing-location">{{carModel?.model}}</p>
+    </section>
+    <section class="listing-features">
+      <h2 class="section-heading">About this Car Model</h2>
+      <ul>
+        <li>Description: {{carModel?.description}}</li>
+        <li>Price (per Hour): {{carModel?.price}}</li>
+
+      </ul>
+    </section>
+    <section class="listing-apply">
+      <h2 class="section-heading">Book Now</h2>
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="Name">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+        
+        <app-datepicker [price] = carModel?.price></app-datepicker>
+        
+
+        <button type="submit" class="primary">Apply now</button>
+      </form>
+      </section>
+  </article>

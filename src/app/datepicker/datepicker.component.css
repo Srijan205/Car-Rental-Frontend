@@ -1,0 +1,24 @@
+div > input{
+    margin: 30px;
+    margin-left: 0px;
+    display: inline;
+}
+button{
+    margin: 50px;
+    margin-top: 20px;
+}
+.end{
+    margin-left: 118px;
+}
+.price{
+    display: block;
+}
+.caution{
+    color: red;
+}
+label {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12pt;
+  }

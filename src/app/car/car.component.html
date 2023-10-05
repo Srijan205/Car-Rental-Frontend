@@ -1,0 +1,13 @@
+ <section>
+    <form>
+      <input type="text" placeholder="Filter by Model" #filter>
+      <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+    </form>
+  </section>
+  <section class="results">
+  <app-car-model
+  *ngFor="let carModel of filteredModelList"
+  [carModel]="carModel">
+</app-car-model>
+  </section>
+  
